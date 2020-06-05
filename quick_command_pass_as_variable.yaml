@@ -21,4 +21,4 @@
   
   - name: Printing out the output of the register variable in the task above
     debug:
-      var: shell_var.stdout_lines      
+      var: shell_var.stdout   
