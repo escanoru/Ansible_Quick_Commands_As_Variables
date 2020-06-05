@@ -1,0 +1,24 @@
+---
+- hosts: all
+  gather_facts: false
+  remote_user: root
+  vars:
+    command_01: "{{ command_01 | default('') }}"
+    command_02: "{{ command_02 | default('') }}"
+    command_03: "{{ command_03 | default('') }}"
+    command_04: "{{ command_04 | default('') }}"
+    command_05: "{{ command_05 | default('') }}"
+  
+  tasks:
+  - name: Running the commands provided by the user
+    shell: |
+      {{ command_01 }}
+      {{ command_02 }}
+      {{ command_03 }}
+      {{ command_04 }}
+      {{ command_05 }}
+    register: shell_var 
+  
+  - name: Printing out the output of the register variable in the task above
+    debug:
+      var: shell_var.stdout_lines      
