@@ -2,6 +2,8 @@ Ansible - Run commands passed as variables
 ===========================================
 Ansible playbook to pass up to 10 commands which will be run on the target nodes.
 
+Jenkisfile with pipeline syntax provided.
+
 Requirements
 ------------
 1. Make sure the parameter ```"host_key_checking = False"``` **is uncomment** on the ```/etc/ansible/ansible.cfg``` configuration file, this is to allow running this role without having an inventory.
