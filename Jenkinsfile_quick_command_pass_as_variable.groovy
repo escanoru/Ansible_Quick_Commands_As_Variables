@@ -68,7 +68,7 @@ pipeline {
         playbook: '${WORKSPACE}/quick_command_pass_as_variable.yaml',
         inventory: '${WORKSPACE}/inventory.ini',
         colorized: true,
-		extras: '--ssh-extra-args="-o StrictHostKeyChecking=no"',
+		extras: '--ssh-extra-args="-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"',
         extraVars: [
 		    command_01: '${Command_01}',
             command_02: '${Command_02}',
